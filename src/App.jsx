@@ -466,41 +466,6 @@ const INITIAL_REVIEWS = [
   }
 ];
 
-const HCI_PRINCIPLES = [
-  {
-    title: '1. User-Friendly Interface',
-    desc: 'Streamlined top navigation bar, clear icon-labeled studio tabs, and one-click entry from the Hero mini-widget into the full Design Lab.'
-  },
-  {
-    title: '2. Immediate Feedback',
-    desc: 'Every color swatch, fabric weave, pattern, text edit, and drag placement updates the front/back garment preview in real time (<16ms).'
-  },
-  {
-    title: '3. Consistency',
-    desc: 'Unified obsidian-and-lavender palette, editorial serif headings, consistent card radii, and predictable action button placement across all 9 pages.'
-  },
-  {
-    title: '4. Visibility of System Status',
-    desc: 'Active side indicator (Front/Back), live price breakdown, print-safe zone boundaries, and real-time cart/wishlist badge counters.'
-  },
-  {
-    title: '5. User Control & Freedom',
-    desc: 'Full Undo (Ctrl+Z), Redo (Ctrl+Y), and one-click Reset Canvas history stack so users can experiment without fear.'
-  },
-  {
-    title: '6. Error Prevention',
-    desc: 'Proactive warnings if size is unselected, artwork approaches print seams, or a view has zero customization.'
-  },
-  {
-    title: '7. Accessibility & Contrast',
-    desc: 'High-contrast Dark/Light theme toggle, ARIA-labeled controls, readable typography, and generous touch targets.'
-  },
-  {
-    title: '8. Flexibility & Efficiency',
-    desc: 'Customize via quick-presets, precision sliders, direct drag-and-drop canvas positioning, or custom image upload.'
-  }
-];
-
 const createDefaultDesign = (overrides = {}) => {
   const garment = overrides.garment || 'tee';
   const defaultLengthByGarment = {
@@ -4316,22 +4281,6 @@ export default function App() {
               </div>
             </div>
           </div>
-
-          {/* HCI Principles Matrix */}
-          <section className={`rounded-3xl border p-6 sm:p-8 ${bgCard}`}>
-            <div className="mb-6">
-              <span className="text-xs uppercase tracking-wider text-[#B799FF] font-semibold">Human-Computer Interaction</span>
-              <h2 className="font-editorial text-3xl font-bold mt-1">8 Core HCI Principles Demonstrated</h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {HCI_PRINCIPLES.map((p) => (
-                <div key={p.title} className={`p-4 rounded-2xl border space-y-1.5 ${bgSubtle}`}>
-                  <h3 className="font-semibold text-sm text-[#B799FF]">{p.title}</h3>
-                  <p className={`text-xs leading-relaxed ${textMuted}`}>{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
         </main>
       )}
 
